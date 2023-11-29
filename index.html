@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function(){
+            if (xhr.readyState === 4) {
+                document.getElementById('ajax').innerHTML = xhr.responseText;
+            }
+        };
+        xhr.open('GET', 'pi.html');
+        xhr.send();
+    </script>
+    
+</head>
+<body>
+    <h1 id="MyHeading">JavaScript and the DOM</h1>
+    <p>Making a web page interactive</p>
+    <h1>This is a new heading</h1>
+    <div id="ajax">  Welcome to AJAX  </div>
+    <div class="listDiv">
+        <input type="text" id="myTextInput" placeholder="Type your preffered color">
+        <button id="myButton">click to change color</button>
+        <ul>
+            <li>
+                Banana 
+                <button class="Li">Remove</button>
+                <button class="Up">Up</button>
+                <button class="down">Down</button>
+            </li>
+            <li>
+                Cherry 
+                <button class="Li">Remove</button>
+                <button class="Up">Up</button>
+                <button class="down">Down</button>           </li>
+            <li>
+                Mango 
+                <button class="Li">Remove</button>
+                <button class="Up">Up</button>
+                <button class="down">Down</button>
+            </li>
+            <li>
+                Apple 
+                <button class="Li">Remove</button>
+                <button class="Up">Up</button>
+                <button class="down">Down</button>
+            </li>
+            <li>
+                Pawpaw 
+                <button class="Li">Remove</button>
+                <button class="Up">Up</button>
+                <button class="down">Down</button>
+            </li>
+        </ul>
+</div>
+    <script src="app.js"></script>
+    <script src="temp.js"></script>
+    
+</body>
+</html>
